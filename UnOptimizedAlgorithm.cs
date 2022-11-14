@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace sorting_algorithm
 {
-    public class NonOptimizedAlgorithm: ISortingAlgorithm
+    public class UnOptimizedAlgorithm: ISortingAlgorithm
     {
         public void Sort (double[] items)
         {
