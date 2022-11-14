@@ -7,7 +7,7 @@ namespace sorting_algorithm
 {
     public static class Extension
     {
-        public static void RendomFill (this double[] items)
+        public static void RandomFill (this double[] items)
         {
             Random obj = new();
             for (int i = 0 ; i <= items.Length - 1; i++)

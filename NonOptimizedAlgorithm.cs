@@ -31,24 +31,26 @@ namespace sorting_algorithm
                     if (items[left] < items[right])
                     {
                         buffer[i] = items[left];
-                        left++;
+                        ++left;
 
                         if (left > midIndex)
-                        {
                             for (int j = right; j <= maxIndex; j++)
+                            {
+                                i++;
                                 buffer[i] = items[j];
-                        }
+                            }
                     }
                     else
                     {
                         buffer[i] = items[right];
-                        right++;
+                        ++right;
 
                         if (right > maxIndex && left <= midIndex)
-                        {
                             for (int j = left; j <= midIndex; j++)
+                            {
+                                i++;
                                 buffer[i] = items[j];
-                        }
+                            }
                     }
                 }
 
