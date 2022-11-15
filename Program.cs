@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using sorting_algorithm;
 
-double[] array = new double[24500];
+double[] array = new double[25120];
 array.RandomFill();
 TimeSpan measureTime = Tracker.MeasureTime(() => new UnOptimizedAlgorithm().Sort(array));
 
