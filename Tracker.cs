@@ -12,9 +12,29 @@ namespace sorting_algorithm
         {
             Stopwatch stopwatch = new();
 
-            //TODO measure time
+            stopwatch.Start();
+            func.DynamicInvoke();
+            stopwatch.Stop();
 
             return stopwatch.Elapsed;
+        }
+
+        public static List<TimeSpan> MeasureTime (List<Action> funcList)
+        {
+            Stopwatch stopwatch = new();
+            List<TimeSpan> measureTimeList = new();
+
+            foreach (var func in funcList)
+            {
+                stopwatch.Start();
+                func.DynamicInvoke();
+                stopwatch.Stop();
+
+                measureTimeList.Add(stopwatch.Elapsed);
+                stopwatch.Reset();
+            }
+
+            return measureTimeList;
         }
     }
 }
