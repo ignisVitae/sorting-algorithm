@@ -76,6 +76,7 @@ namespace sorting_algorithm
                         right = midIndex + 1;
                         minIndex = left;
                         j = -1;
+                        BreakMerge(items, buffer, minIndex, maxIndex);
                     }
                 }
             }
